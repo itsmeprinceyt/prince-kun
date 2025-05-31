@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prince‑kun Discord Bot 🤖
+Prince-kun is a custom-built Discord bot developed with TypeScript to serve as the all-in-one solution for managing my personal Discord [server](https://discord.gg/HgXNs4p5cx). Designed with both automation and interactivity in mind, the bot handles essential server moderation, user management, and provides a fully integrated backend for ItsMe Prince Shop powered by a MySQL database.
 
-## Getting Started
+From banning users and sending automated updates to distributing giveaway codes and managing a shop leaderboard, Prince-kun blends practical utility with personal touches. It supports both slash commands and prefix-based commands, and includes rich support for accessing social links, game items, livestream codes, and purchase profiles — making it an essential hub for both server members and clients.
 
-First, run the development server:
+### Showcase Website: https://prince-kun.vercel.app/
+Please visit the showcase website above to know all of these:
+- Prince-kun Discord Bot Repository 
+- Prince-kun Website Repository 
+- Prince-kun Website Backend Repository 
+- Prince-kun Showcase Website Repository `<- You are here`
 
+# 🚀 Features
+## 🛡️ Server Management
+- Ban/Kick users (user moderation)
+- Purge/delete bulk messages
+- Announce server changes and bot updates automatically
+- Notify when a user donates a card or item for giveaways
+- Send live stream codes for ongoing game events
+- Send embed messages when game items are in stock for sale
+- Post redeem codes from YouTube
+- Assign and remove server roles:
+  - Leaker
+  - Mod
+  - Bot Tester
+  - Client
+  - Code Poster
+  - Shop Manager
+## 🛒 ItsMe Prince Shop
+- Admin panel to manage users in the shop’s MySQL database
+- Delete user data from the database
+- Log item purchases
+- Maintain a leaderboard of top buyers
+- Modify user data (manual/admin edits)
+- Let users view their own profile with:
+- Purchase history
+- Registered data
+- Register as a new user
+- Update or reset personal data
+## 🎮 Utility & Fun Commands
+Explore a variety of useful and entertaining commands to enhance your Discord experience.
+Some commands will provide information about me, such as social media links and in-game account numbers.
+- 🎨 View bot's artwork
+- 🖼️ Display your or another user's avatar
+- ❌ Delete messages or content with precision ( only restricted to Karuta/Sofi/Mazoku/Lumina )
+- 📱 Check prince's device-related information
+- 🎮 Get prince's game IDs
+- 🐙 Show prince's GitHub profile or repository data
+- 📸 View prince's Instagram posts or profiles
+- ☕ Support me via Ko-fi
+- ➗ Perform basic math operations
+- 💳 Show prince's PayPal or UPI details
+- 🖥️ Display prince's PC specifications
+- 📜 View Sofi bot guides
+- 📞 Access prince's WhatsApp contact or details
+- 💼 Karuta's worker assistance
+- 📺 Get updates from my YouTube channel or clips
+
+# Installation Structure/Contribute
+1. Clone the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/itsmeprinceyt/prince-kun.git
+cd prince-kun-discord-bot
 ```
+2. Install Dependencies
+```bash
+npm install
+```
+3. **Create a New Branch:** Before making changes, create a new branch:
+4. Commit with proper message and description
+5. Push to your fork
+```bash
+git push origin feature/your-feature-name
+```
+6. Create a Pull Request
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Development Commands
+`dev`
+- **Command:** `npm run dev` or `nodemon`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Description:** Starts the development server. This command typically watches for changes in your source files (`src/index.ts` in this case) and automatically restarts the server, allowing for a rapid development workflow. It uses tsx watch for this purpose, indicating a TypeScript execution environment.
 
-## Learn More
+`build`
+- **Command:** `npm run build`
 
-To learn more about Next.js, take a look at the following resources:
+- **Description:** Compiles the TypeScript source code and copies necessary assets using `node dist/copyAssets.js`. After compilation, this script is executed to copy any static assets (like images, CSS, or other non-TypeScript files) from your source directory to the build output directory, ensuring they are included in the final build. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`start`
+- **Command:** `npm run start`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Description:** Runs the compiled application. This command is used to start ( `dist/src/index.js` ) after it has been build using `npm run build`.
 
-## Deploy on Vercel
+`sql`
+- **Command:** `npm run sql`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Description:** Executes only the `dist/src/sql.js` for doing any query related stuff.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Video
+TBA
