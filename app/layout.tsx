@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
+import Loading from './(components)/Loading';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   title: "Prince-kun | Showcase",
   description: ".",
   icons: {
-    icon: "/public",
+    icon: "/DiscordBotLogo2.png",
   },
 };
 
@@ -29,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading/>}>
           {children}
         </Suspense>
       </body>
